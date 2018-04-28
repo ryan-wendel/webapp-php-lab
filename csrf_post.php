@@ -15,17 +15,17 @@ file_put_contents($token_file, $new_token);
 
 if (isset($_POST['input'])) {
     $input = urldecode($_POST['input']);
-}
 
-if (isset($_POST['csrf_token'])) {
-    $post_token = $_POST['csrf_token'];
+    if (isset($_POST['csrf_token'])) {
+        $post_token = $_POST['csrf_token'];
 
-    echo "<p>Old token = " . $old_token . "</p>\n";
-    echo "<p>Post token = " . $post_token . "</p>\n";
+        echo "<p>Old token = " . $old_token . "</p>\n";
+        echo "<p>Post token = " . $post_token . "</p>\n";
 
-    if(strcmp($post_token, $old_token) == 0) {
-        echo "<p style='color: red;'><strong>Success</strong>: You've changed the profile value.</p>\n";
-        file_put_contents($profile, $input);
+        if(strcmp($post_token, $old_token) == 0) {
+            echo "<p style='color: red;'><strong>Success</strong>: You've changed the profile value.</p>\n";
+            file_put_contents($profile, $input);
+        }
     }
 }
 
