@@ -34,7 +34,7 @@ $profile_value = file_get_contents($profile);
 echo "<p>Profile value = " . $profile_value . "</p>\n";
 
 ?>
-<form id="form1" action="csrf_post.php" method="post">
+<form id="form1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <input type="text" name="input">
     <input type="hidden" name="csrf_token" value="<?php echo $new_token; ?>">
     <input type="submit">
