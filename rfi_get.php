@@ -26,10 +26,11 @@ if (isset($_GET['include'])) {
             highlight_string(fgets($file));
         }
 
-        fclose($file);
     } else {
         echo "<p style='color: red;'>Unable to open file: $include</p>";
     }
+    
+    fclose($file);
 } else {
     echo "<p>GET['include'] is empty</p>\n";
 }
