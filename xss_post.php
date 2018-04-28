@@ -1,6 +1,6 @@
 <html>
 <body>
-<h3 id="title">XSS Vulnerable Form</3>
+<h3 id="title">XSS Vulnerable Form</h3>
 <?php
 include "include/headers.php";
 
