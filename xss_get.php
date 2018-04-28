@@ -27,12 +27,17 @@ if(isset($_GET['input'])) {
 if(isset($_GET['event'])) {
     $event = urldecode($_GET['event']);
 
+    echo "<p>GET['event'] = $event</p>\n";
+
     echo "<img onload='$event' src='images/kitteh1.jpg' width='200'><br />";
 } else {
+    echo "<p>GET['event'] is empty</p>\n";
+
     echo "<img src='images/kitteh1.jpg' width='200'><br />";
 }
 
-	echo "<div style='width: 500px;'><p>&ldquo;The major lesson Tiggers need to learn is that if they don't control their impulses, their impulses will control them. No matter how much they do, Tiggers are never satisfied because they don't know the feeling of accomplishment that eventually comes when one persistently applies one's will to the attaining of non-immediately-reachable goals.&rdquo;</p>
+
+echo "<div style='width: 500px;'><p>&ldquo;The major lesson Tiggers need to learn is that if they don't control their impulses, their impulses will control them. No matter how much they do, Tiggers are never satisfied because they don't know the feeling of accomplishment that eventually comes when one persistently applies one's will to the attaining of non-immediately-reachable goals.&rdquo;</p>
 <p>&#45 Benjamin Hoff</p></div>\n";
 ?>
 </body>
